@@ -1,11 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
 
-/*
-	TXT by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2358,11 +2353,14 @@ input, select, textarea {
 		font-weight: 700;
 		text-transform: uppercase;
 		cursor: default;
+		border-bottom: 2px solid #01BCD8;
 	}
 
 		#nav ul {
 			position: relative;
 			z-index: 1001;
+			display: flex;
+			justify-content: space-between;
 		}
 
 		#nav li {
@@ -2389,7 +2387,7 @@ input, select, textarea {
 				position: relative;
 				display: block;
 				text-decoration: none;
-				color: #6b7770;
+				color: #01BCD8;
 				top: -6px;
 				padding: 6px 1.5em 0.25em 1.5em;
 				border-bottom-left-radius: 6px;
@@ -2402,12 +2400,12 @@ input, select, textarea {
 			}
 
 			#nav li:hover a, #nav li:hover span {
-				background: #C1CAC5;
+				background: #05AD52;
 				color: #fff;
 			}
 
 			#nav li.active a, #nav li.active span {
-				background: #C1CAC5;
+				background: #64b68a;
 				color: #fff;
 			}
 
@@ -2418,7 +2416,7 @@ input, select, textarea {
 
 	.dropotron {
 		list-style: none;
-		background: #6B7770;
+		background: #4ecbde;
 		color: #fff;
 		border-radius: 6px;
 		line-height: 2.75em;
@@ -2439,19 +2437,19 @@ input, select, textarea {
 
 			.dropotron li > a, .dropotron li > span {
 				display: block;
-				color: #D7DAD8;
+				color: #444444;
 				text-decoration: none;
 				padding: 0 1.25em;
 			}
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
 				color: #fff;
-				background: #7B8780;
+				background: #7aafd4;
 			}
 
 			.dropotron li.active > a, .dropotron li.active > span {
 				color: #fff;
-				background: #7B8780;
+				background: #d4ddd8;
 			}
 
 			.dropotron li:first-child {
@@ -2478,7 +2476,8 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
+		
+		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg"); 
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
@@ -2489,7 +2488,7 @@ input, select, textarea {
 		#banner .content {
 			position: relative;
 			background-color: rgba(21, 28, 23, 0.85);
-			background-image: url("images/overlay.png"), url("images/highlight.png");
+			background-image:    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/bannerphoto.jpg"), url("images/highlight.png");
 			background-position: top left, center center;
 			background-size: auto, 100% 250%;
 			background-repeat: repeat, no-repeat;
@@ -2499,7 +2498,7 @@ input, select, textarea {
 		}
 
 			#banner .content h2 {
-				color: #fff;
+				color: #12c8f6;
 				font-size: 2.75em;
 				margin: 0 0 0.5em 0;
 			}
@@ -2509,7 +2508,7 @@ input, select, textarea {
 				font-family: 'Open Sans Condensed', sans-serif;
 				font-weight: 700;
 				text-transform: uppercase;
-				color: #575d59;
+				color: #f5f6f5;
 				font-size: 1.35em;
 				margin: 0 0 1.25em 0;
 			}
