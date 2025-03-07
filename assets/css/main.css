@@ -78,7 +78,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f2f5f3;
+		background: #ffffff;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -104,7 +104,7 @@ input, select, textarea {
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
-		color: #6b7770;
+		color: #0077b6;
 		margin: 0 0 0.5em 0;
 		line-height: 1.3;
 	}
@@ -150,7 +150,19 @@ input, select, textarea {
 
 	b, strong {
 		font-weight: 700;
-		color: #6b7770;
+		color:b, strong {
+		font-weight: 700;
+		color: #0077b6;
+	}
+
+	i, em {
+		font-style: italic;
+	}
+
+	br.clear {
+		clear: both;
+	}
+;
 	}
 
 	i, em {
@@ -204,7 +216,7 @@ input, select, textarea {
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
-		color: #c1cac5;
+		color: #0077b6;
 	}
 
 /* Container */
@@ -1892,7 +1904,7 @@ input, select, textarea {
 		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
-		background: #b1ddab;
+		background: #04ad4d;
 		color: #fff;
 		border: 0;
 		line-height: 1em;
@@ -2456,7 +2468,7 @@ input, select, textarea {
 				position: relative;
 				display: block;
 				text-decoration: none;
-				color: #01BCD8;
+				color: #0077b6;
 				top: -6px;
 				padding: 6px 1.5em 0.25em 1.5em;
 				border-bottom-left-radius: 6px;
@@ -2469,24 +2481,24 @@ input, select, textarea {
 			}
 
 			#nav li:hover a, #nav li:hover span {
-				background: #05AD52;
+				background: #04ad4d;
 				color: #fff;
 			}
 
 			#nav li.active a, #nav li.active span {
-				background: #64b68a;
+				background: #04ad4d;
 				color: #fff;
 			}
 
 			#nav li.current a {
-				background: #b1ddab;
+				background: #04ad4d;
 				color: #fff;
 			}
 
 	.dropotron {
 		list-style: none;
-		background: #4ecbde;
-		color: #fff;
+		background: #ffffff;
+		color: #0077b6;
 		border-radius: 6px;
 		line-height: 2.75em;
 		text-align: center;
@@ -2506,14 +2518,14 @@ input, select, textarea {
 
 			.dropotron li > a, .dropotron li > span {
 				display: block;
-				color: #444444;
+				color: #0077b6;
 				text-decoration: none;
 				padding: 0 1.25em;
 			}
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
-				color: #fff;
-				background: #7aafd4;
+				color: #00b4d8;
+				background: #ffffff;
 			}
 
 			.dropotron li.active > a, .dropotron li.active > span {
@@ -2546,7 +2558,7 @@ input, select, textarea {
 	#banner {
 		position: relative;
 		background-image: url("images/overlay.png"), url("images/overlay.png");
-		background-color: #64b68a;
+		background-color: #ffffff;
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
@@ -2602,7 +2614,7 @@ input, select, textarea {
 
 				#banner .content .button:hover {
 					color: #e4e7e5;
-					border-color: rgba(87, 93, 89, 0.75);
+					border-color: #00b4d8;
 				}
 
 				#banner .content .button:active {
@@ -2614,8 +2626,8 @@ input, select, textarea {
 
 	#main {
 		background: #ffffff;
-		border-top: solid 5px #b1ddab;
-		border-bottom: solid 5px #c1cac5;
+		border-top: solid 5px #04ad4d;
+		border-bottom: solid 5px #04ad4d;
 		border-top-width: 35px;
 		border-bottom-width: 10px;
 		padding: 6em 0 6em 0;
