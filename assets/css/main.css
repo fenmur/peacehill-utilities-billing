@@ -1886,10 +1886,82 @@ input, select, textarea {
 				width: auto;
 			}
 
+   /*Login, Forgot Password, Reset Password*/
 
+   .auth-container {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f2f2f2;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
+  .auth-container .logo {
+	margin-bottom: 20px;
+	width: 150px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 
-			
+  }
+
+  .auth-container h2 {
+
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+
+  }
+
+  .auth-container p {
+	font-size: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+  }
+
+  .auth-container form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+  }
+
+  .auth-container label {
+	font-size: 16px;
+	font-weight: bold;
+  }
+
+  .auth-container input[type="email"],
+  .auth-container input[type="password"] {
+	font-size: 16px;
+	padding: 10px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+
+  .auth-container .remember-me {
+
+	  display: flex;
+	  align-items: center;
+	  gap: 10px;
+	
+	  
+  }
+
+  .auth-container .remember-me input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+  }
+
+  .auth-container .remember-me label {
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border: #006376;
+
+  }
+
 
 /* Button */
 
