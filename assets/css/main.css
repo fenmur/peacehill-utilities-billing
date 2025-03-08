@@ -2605,7 +2605,7 @@ input, select, textarea {
 				-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
 				-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
 				transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				color: #b4b7b5;
+				color: #00b4d8;
 				background: transparent !important;
 				border: solid 4px #575d59;
 				border-color: rgba(87, 93, 89, 0.35);
@@ -2618,7 +2618,7 @@ input, select, textarea {
 				}
 
 				#banner .content .button:active {
-					color: #fff;
+					color: #00b4d8;
 					border-color: #616763;
 				}
 
