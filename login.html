@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeaceHill Utilities Billing - Login</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Peace Hill Utilities Billing Portal - Login</title>
+    <link rel="stylesheet" href="assets/css/login.css">
 
 </head>
 <body>
     
     <div class="auth-container">
-        <img src="images/logo_1.png" alt="Peace Hills Utilities Logo" class="logo">
+        <img src="assets/css/images/logo_1.png" alt="Peace Hill Utilities Logo" class="logo">
 
-        <h2> Login to PeaceHill Utilities Billing</h2>
+        <h2> Login to Peace Hill Utilities Billing</h2>
 
         <form action="index.html" method="post">
-            <label for="email">Email or Username</label>
-            <input type="text" id="email" name="email" placeholder="Email or Username" required>
+            <label for="email">Employee Email</label>
+            <input type="text" id="id" name="id" placeholder="Enter email" required>
             
-            <label for = "password">Password</label>
+            <label for = "password">Employee Password</label>
             <input type="password" id="password" name ="password" placeholder="Enter Password" required>
 
             <div class="remember-me">
@@ -27,14 +27,13 @@
             </div>
 
             <button type="submit">Login</button>
-            
             <p class="forgot-password"><a href="forgot-password.html">Forgot Password?</a></p>
         </form>
 
-        <p class="back-to-login"><a href="index.html">Back to Home</a></p>
-    </div>
-
-    <script src="assets/js/auth.js"></script>
+        <p class="terms-conditions">By logging in, you agree to our <a href="terms-conditions.html">Terms and Conditions</a></p>
+        <p class="privacy-agreement">By logging in, you agree to our <a href="privacy-agreement.html">Privacy Agreement</a></p>
+        </div>
+        <script src="assets/js/auth.js"></script>
     
 </body>
 </html>

@@ -20,8 +20,7 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
@@ -79,6 +78,7 @@ input, select, textarea {
 
 	body {
 		background: #ffffff;
+		background-image: url("images/overlay.png");
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1737,230 +1737,82 @@ input, select, textarea {
 
 /* Image */
 
-	.image {
-		position: relative;
-		display: inline-block;
-		border-radius: 8px;
-	}
-
-		.customers.image {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			width: 100%;
-		}
-		
-
-		.customers.image:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background: url("images/overlay.png");
-			border-radius: 8px;
-		}
-
-		.image.fit {
-			display: block;
-			width: 100%;
-		}
-
-		.image.featured {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-		}
-
-		.image.left {
-			float: left;
-			margin: 0 2em 2em 0;
-		}
-
-		.image.centered {
-			display: block;
-			margin: 0 0 2em 0;
-		}
-
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
-
-		
-
-			/* Image */
-
-	.image {
-		position: relative;
-		display: inline-block;
-		border-radius: 8px;
-	}
-
-		.image img {
-			display: block;
-			width: 100%;
-			border-radius: 8px;
-		}
-
-		.image:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background: url("images/overlay.png");
-			border-radius: 8px;
-		}
-
-		.image.fit {
-			display: block;
-			width: 100%;
-		}
-
-		.image.featured {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-		}
-
-		.customers .image.left {
-			float: left;
-			margin: 0 2em 2em 0;
-		}
-
-		.customers .image.centered {
-			display: block;
-			margin: 0 0 2em 0;
-		}
-
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
-
-			
-		.customers .image img {
-			display: block;
-			width: 100%;
-			border-radius: 8px;
-		}
-
-		.customers .image:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background: url("images/overlay.png");
-			border-radius: 8px;
-		}
-
-		.customers .image.fit {
-			display: block;
-			width: 100%;
-		}
-
-		.customers .image.featured {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-		}
-
-		.customers .image.left {
-			float: left;
-			margin: 0 2em 2em 0;
-		}
-
-		.customers .image.centered {
-			display: block;
-			margin: 0 0 2em 0;
-		}
-
-			.customers .image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
-
-   /*Login, Forgot Password, Reset Password*/
-
-   .auth-container {
-	max-width: 400px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #f2f2f2;
-	border-radius: 8px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .auth-container .logo {
-	margin-bottom: 20px;
-	width: 150px;
+.image {
 	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-
-  }
-
-  .auth-container h2 {
-
-	font-size: 24px;
-	margin-bottom: 20px;
-	text-align: center;
-
-  }
-
-  .auth-container p {
-	font-size: 15px;
-	margin-bottom: 20px;
-	text-align: center;
-  }
-
-  .auth-container form {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-  }
-
-  .auth-container label {
-	font-size: 16px;
-	font-weight: bold;
-  }
-
-  .auth-container input[type="email"],
-  .auth-container input[type="password"] {
-	font-size: 16px;
-	padding: 10px;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-  }
-
-  .auth-container .remember-me {
-
-	  display: flex;
-	  align-items: center;
-	  gap: 10px;
-	
-	  
-  }
-
-  .auth-container .remember-me input[type="checkbox"] {
-	width: 20px;
-	height: 20px;
-  }
-
-  .auth-container .remember-me label {
 	display: inline-block;
-	font-size: 16px;
-	cursor: pointer;
-	border: #006376;
-
+	border-radius: 8px;
   }
+  
+  .image img {
+	display: block;
+	width: 100%;
+	border-radius: 8px;
+  }
+  
+  .image:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url("images/overlay.png");
+	border-radius: 8px;
+  }
+  
+  .image.fit {
+	display: block;
+	width: 100%;
+  }
+  
+  .image.featured {
+	display: block;
+	width: 100%;
+	margin: 0 0 2em 0;
+  }
+  
+  .image.left {
+	float: left;
+	margin: 0 2em 2em 0;
+  }
+  
+  .image.centered {
+	display: block;
+	margin: 0 0 2em 0;
+  }
+  
+  .image.centered img {
+	margin: 0 auto;
+	width: auto;
+  }
+  
+  .customers .image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	flex-direction: row;
+	justify-content: space-around;
+  }
+  
+  .customers .image img {
+	width: 300px;
+	margin: 0 auto;
+  }
+  
+  .customers .image h3 {
+	margin-top: 10px;
+	text-align: center;
+  }
+  
+  .customers .image p {
+	margin-top: 10px;
+	text-align: center;
+  }
+  
 
 
 /* Button */
@@ -2528,7 +2380,7 @@ input, select, textarea {
 			transition: top .15s ease-in-out;
 		}
 
-			#nav li > ul {
+			#nav li  ul {
 				display: none;
 			}
 
@@ -2629,70 +2481,30 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png");
-		background-color: #ffffff;
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
 		z-index: 1;
+		display: block;
 		padding: 11em 0;
+		width: 100%;
 	}
 
 		#banner .content {
 			position: relative;
-			background-color: rgba(21, 28, 23, 0.85);
-			background-image: url("images/overlay.png"), url("images/bannerphoto.jpg");
-			background-position: top left, center center;
-			background-size: auto, 100% 250%;
+			background-color: #ffffff;
+			background-position: center;
+			background-size: cover, 100;
+			border: 20px solid #0077b6;
+			border-radius: 6px;
 			background-repeat: repeat, no-repeat;
 			text-align: center;
 			margin: 0;
 			padding: 4em 0 3.5em 0;
 		}
-
-			#banner .content h2 {
-				color: #fff;
-				font-size: 2.75em;
-				margin: 0 0 0.5em 0;
-			}
-		
-		#banner .content p {
-			display: block;
-			font-family: 'Open Sans Condensed', sans-serif;
-			font-weight: 700;
-			text-transform: uppercase;
-			color: #f5f6f5;
-			font-size: 1.35em;
-			margin: 0 0 1.25em 0;
-		}
-
-
-	}
-
-
 		
 
-			#banner .content .button {
-				-moz-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				color: #00b4d8;
-				background: transparent !important;
-				border: solid 4px #575d59;
-				border-color: rgba(87, 93, 89, 0.35);
-				font-size: 1.5em;
-			}
 
-				#banner .content .button:hover {
-					color: #e4e7e5;
-					border-color: #00b4d8;
-				}
-
-				#banner .content .button:active {
-					color: #00b4d8;
-					border-color: #616763;
-				}
 
 /* Main */
 
@@ -2718,22 +2530,47 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer {
-		text-align: center;
-		padding: 8em 0 8em 0;
-	}
+#footer {
+    margin-top: 50px;
+    background-color: #ffffff;
+    color: #004c99;
+    padding: 5px;
+    text-align: center;
+}
 
-		#footer a {
-			color: inherit;
-		}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-		#footer h2.major {
-			margin: 0 0 1.5em 0;
-		}
+.logo-container {
+    width: 10%;
+    margin: 10px 5px 5px 5px;
+}
 
-			#footer h2.major span {
-				background: #f2f5f3;
-			}
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-text {
+    width: 40%;
+    margin: 5px;
+    text-align: left;
+}
+
+.footer-text p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+
+}
+
+.map-container {
+    width: 30%;
+    margin: 5px;
+}
 
 /* Copyright */
 

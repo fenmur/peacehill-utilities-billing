@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peace Hills Utilities Inc.Billing System: Billing</title>
+    <link rel="stylesheet" href="assets/css/billing.css">
+    <script src="assets/js/billingscript.js"></script>
+    <script src="https://kit.fontawesome.com/50988ee01a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <header>
+ <img src="assets/css/images/logo_1.png" alt="Peace Hill Utilities Logo" class="logo">
+ </header>
+
+
+ <div class="container1">
+    <!--Navigation-->
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="invoice-transactions">Invoice Transactions</button>
+        <button class="tab-btn" data-tab="invoices">Invoices</button>
+        <button class="tab-btn" data-tab="recurring-payments">Recurring Payments</button>
+    </div>
+   
+    <!--Overview-->
+
+    <div class="tab-content active" id="overview">
+        <h2>Overview</h2>
+     <div class="quick-actions">
+        <button><i class="fa-solid fa-user"></i>Customers</button>
+        <button><i class="fa-solid fa-calculator"></i>Estimate</button>
+        <button><i class="fa-solid fa-gauge"></i>Meter Reads</i></button>
+        <button><i class="fa-solid fa-file-invoice"></i>Invoice</button>
+        <button><i class="fa-solid fa-file-lines"></i>Recurring Invoice</button>
+        <button><i class="fa-solid fa-money-check-dollar"></i>Receive Payment</button>
+        <button><i class="fa-solid fa-money-check"></i>Take Payment</button>
+        <button><i class="fa-solid fa-receipt"></i>Sales Receipt</button>
+        <button><i class="fa-solid fa-building-columns"></i>Bank Deposit</button>
+        <button><i class="fa-solid fa-file-circle-plus"></i>Create Statement</button>
+    </div>
+
+    <div class ="tasks">
+        <h3>Tasks and Reminders</h3>
+        <button>Go</button>
+    </div>
+
+    <div class="payments">
+       <h3>Match or categorize Payment transactions</h3>
+       <button>Go</button>
+    </div>
+    </div>
+
+   
+
+    <!--Invoices Transactions-->
+    <div class="tab-content" id="invoice-transactions">
+        <h2>Invoice Transactions</h2>
+
+        <div class="invoice-tabs">
+            <button class="invoice-tab active" data-invoice="unbilled" data-tab="unbilled">Unbilled Income</button>
+            <button class="invoice-tab" data-invoice="overdue" data-tab="overdue">Overdue Invoices</button>
+            <button class="invoice-tab" data-invoice="open" data-tab="open">Open Invoices and Credits</button>
+            <button class="invoice-tab" data-invoice="recently-paid" data-tab="recently-paid">Recently Paid</button>
+
+        </div>
+        
+        <div id="unbilled" class="invoice-content">
+            <p>0</p>
+            <h3>Unbilled Income</h3>
+           
+        </div>
+
+        <div id="overdue" class="invoice-content">
+            <p>0</p>
+            <h3>Overdue Invoices</h3>
+            
+        </div>
+
+        <div id="open" class="invoice-content">
+            <p>0</p>
+            <h3>Open Invoices and Credits</h3>
+            
+        </div>
+
+        <div id="recently-paid" class="invoice-content">
+            <p>0</p>
+            <h3>Recently Paid</h3>
+            
+        </div>
+
+         
+
+        <div class="filters">
+            <select id="batch-actions">
+                <option> Batch Actions</option>
+                <option> Send Reminders</option>
+                <option> Delete</option>
+            </select>
+
+            <select id="transaction-type">
+                <option> All Transactions</option>
+                <option>Invoice</option>
+                <option>Receipt</option>
+                <option>Unbilled Income</option>
+                <option> Money Received</option>
+                <option> Recently Paid</option>
+
+            </select>
+
+            <select id="data-range">
+                <option>Last 12 months</option>
+                <option> Last 6 months</option>
+                <option> Last 3 months</option>
+                <option> Last 30 days</option>
+            </select>
+
+            <input type="text" id="customer-search" placeholder="Search Customer">
+        </div>
+
+        <div class="new-transaction">
+            <button id= "new-transaction-btn">New Transaction</button>
+            <div class="dropdown-content">
+                <a href="#">Invoices</a>
+                <a href="#">Payments</a>
+                <a href="#">Receipts</a>
+                <a href="#">Payment Links</a>
+                <a href="#">Delayed Charges</a>
+                <a href="#">NSF Fees</a>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>No.</th>
+                    <th>Customer</th>
+                    <th>Memo</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-data">
+                <tr>
+                    <td>00/00/2x</td>
+                    <td>Invoice</td>
+                    <td>0000</td>
+                    <td>John Doe</td>
+                    <td>---</td>
+                    <td>$0.00</td>
+                    <td>Due in 0 days</td>
+                    <td><a href="#">View/Edit</a> <a href = "#">Receive Payment</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--Invoices-->
+
+    <div class="tab-content" id="invoices">
+        <h2>Invoices</h2>
+    </div>
+
+    <!--Recurring Payments-->
+
+    <div class="tab-content" id="recurring-payments">
+        <h2>Recurring Payments</h2>
+    </div>
+
+ </div>
+
+ <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+</body>
+</html>
+
