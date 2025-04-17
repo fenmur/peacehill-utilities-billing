@@ -98,7 +98,8 @@
                 <option> Send Reminders</option>
                 <option> Delete</option>
             </select>
-
+            
+            <label for="transaction-type">Type</label>
             <select id="transaction-type">
                 <option> All Transactions</option>
                 <option>Invoice</option>
@@ -108,16 +109,17 @@
                 <option> Recently Paid</option>
 
             </select>
-
+            <label for="data-range">Date</label>
             <select id="data-range">
                 <option>Last 12 months</option>
                 <option> Last 6 months</option>
                 <option> Last 3 months</option>
                 <option> Last 30 days</option>
             </select>
-
-            <input type="text" id="customer-search" placeholder="Search Customer">
+             <label for="customer-search">Customer</label>
+            <input type="text" id="customer-search" placeholder="Search">
         </div>
+        
 
         <div class="new-transaction">
             <button id= "new-transaction-btn">New Transaction</button>
@@ -133,7 +135,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Date</th>
+                    <th><input type="checkbox">Date</th>
                     <th>Type</th>
                     <th>No.</th>
                     <th>Customer</th>
