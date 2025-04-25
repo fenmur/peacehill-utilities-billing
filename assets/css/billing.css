@@ -197,9 +197,10 @@ header {
 
   }
 
-  .label {
+  .filters label {
 
-    display: flex;
+    display: block;
+    
     flex-direction: row;
     margin-bottom: 10px;
   }
@@ -217,6 +218,7 @@ header {
     box-sizing: border-box;
 
   }
+
 
 
  .new-transaction {
