@@ -164,8 +164,90 @@
 
     <div class="tab-content" id="invoices">
         <h2>Invoices</h2>
+
+        <section class="summary-section">
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <p>$1,000.00<span class="label">Unpaid</span></p>
+                    <small>Last 365 days</small>
+                    <div class="progress-bar unpaid"></div>
+                    </div>
+                    <div class="summary-item">
+                        <p>$1,525.50<span class="label">Overdue</span></p>
+                        <div class="progress-bar overdue"></div>
+                    </div>
+                    <div class="summary-item">
+                        <p>$1,000.00<span class="label">Not Due Yet</span></p>
+                        <div class="progress-bar not-due"></div>
+                    </div>
+                    <div class="summary-item">
+                        <p>$1,000.00<span class="label">Paid</span></p>
+                        <small>Last 30 days</small>
+                        <div class="progress-bar paid"></div>
+                    </div>
+                    <div class="summary-item">
+                        <p>$1,000.00<span class="label">Not Deposited</span></p>
+                        <p>$1,000.00<span class="label">Deposited</span></p>
+                        <div class="progress-bar deposited"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-group">
+                <button id="batch-actions">Batch Actions</button>
+            </div>
+            <div class="filter-group">
+                <label>Status</label>
+                <select>
+                    <option>All</option>
+                    <option>Paid</option>
+                    <option>Unpaid</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Date</label>
+                <select>
+                    <option>Last 12 months</option>
+                    <option> Last 30 days</option>
+                    <option>Last 7 days</option>
+                </select>
+            </div>
+            <div class="create-invoice">
+                <button>Create Invoice</button>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>NO.</th>
+                        <th>CUSTOMER</th>
+                        <th>AMOUNT</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody id="invoice-data">
+                    <tr>
+                        <td>00/00/2x</td>
+                        <td>1000</td>
+                        <td>James Smith: Smith's ClearWater Works</td>
+                        <td>$1,000.00</td>
+                        <td><span class="status overdue">Overdue 7 days</span>></td>
+                        <td><a href="#">View</a>
+                            <a href="#">Receive Payment</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
 
+    
     <!--Recurring Payments-->
 
     <div class="tab-content" id="recurring-payments">
