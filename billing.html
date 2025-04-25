@@ -31,7 +31,7 @@
      <div class="quick-actions">
         <button><i class="fa-solid fa-user"></i>Customers</button>
         <button><i class="fa-solid fa-calculator"></i>Estimate</button>
-        <button><i class="fa-solid fa-gauge"></i>Meter Reads</i></button>
+        <button><i class="fa-solid fa-gauge"></i>Meter Reads</button>
         <button><i class="fa-solid fa-file-invoice"></i>Invoice</button>
         <button><i class="fa-solid fa-file-lines"></i>Recurring Invoice</button>
         <button><i class="fa-solid fa-money-check-dollar"></i>Receive Payment</button>
@@ -166,32 +166,34 @@
         <h2>Invoices</h2>
 
         <section class="invoices2-summary">
-            <div class="summary-grid">
                 <div class="summary-item">
-                    <p>$1,000.00<span class="label">Unpaid</span></p>
+                    <p>$1,000.00 <span class="label">Unpaid</span></p>
                     <small>Last 365 days</small>
-                    <div class="progress-bar unpaid"></div>
-                    </div>
-                    <div class="summary-item">
-                        <p>$1,525.50<span class="label">Overdue</span></p>
-                        <div class="progress-bar overdue"></div>
-                    </div>
-                    <div class="summary-item">
-                        <p>$1,000.00<span class="label">Not Due Yet</span></p>
-                        <div class="progress-bar not-due"></div>
-                    </div>
-                    <div class="summary-item">
-                        <p>$1,000.00<span class="label">Paid</span></p>
-                        <small>Last 30 days</small>
-                        <div class="progress-bar paid"></div>
-                    </div>
-                    <div class="summary-item">
-                        <p>$1,000.00<span class="label">Not Deposited</span></p>
-                        <p>$1,000.00<span class="label">Deposited</span></p>
-                        <div class="progress-bar deposited"></div>
-                    </div>
+                    <div class="invoices2-summary progress-bar unpaid"></div>
                 </div>
-            </div>
+                    <div class="summary-item">
+                        <p>$1,525.50 <span class="label">Overdue</span></p>
+                        <div class="invoices2-summary progress-bar overdue"></div>
+                    </div>
+                    <div class="summary-item">
+                        <p>$1,000.00 <span class="label">Not Due Yet</span></p>
+                        <div class="invoices2-summary progress-bar not-due"></div>
+                    </div>
+                    <div class="summary-item">
+                        <p>$1,000.00 <span class="label">Paid</span></p>
+                        <small>Last 30 days</small>
+                        <div class="invoices2-summary progress-bar paid"></div>
+                    </div>
+                    <div class="summary-item">
+                        <p>$1,000.00 <span class="label">Not Deposited</span></p>
+                        <div class="invoices2-summary progress-bar not-deposited"></div>
+                    </div>
+
+                       
+                    <div class="summary-item">
+                        <p>$1,000.00 <span class="label">Deposited</span></p>
+                        <div class="invoices2-summary progress-bar deposited"></div>
+                    </div>
         </section>
 
         <section class="invoices2-filters">
@@ -220,6 +222,7 @@
             </div>
         </section>
 
+        <div class="invoices2-table">
         <section class="invoices2-table">
             <table>
                 <thead>
@@ -232,13 +235,13 @@
                         <th>ACTION</th>
                     </tr>
                 </thead>
-                <tbody id="invoice-data">
+                <tbody id="invoice-data2">
                     <tr>
                         <td>00/00/2x</td>
                         <td>1000</td>
                         <td>James Smith: Smith's ClearWater Works</td>
                         <td>$1,000.00</td>
-                        <td><span class="status-overdue">Overdue 7 days</span>></td>
+                        <td><span class="status-overdue">Overdue 7 days</span></td>
                         <td><a href="#">View</a>
                             <a href="#">Receive Payment</a>
                         </td>
@@ -246,6 +249,7 @@
                 </tbody>
             </table>
         </section>
+        </div>
     </div>
 
     

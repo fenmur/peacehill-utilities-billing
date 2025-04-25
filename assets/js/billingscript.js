@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tabContents.forEach(tabContent => tabContent.classList.remove("active"));
             document.getElementById(tab.dataset.tab).classList.add("active");
 
+
         });
     });
 
