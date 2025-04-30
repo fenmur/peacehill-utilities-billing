@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peace Hills Utilities Inc.Billing System: Billing</title>
+    <link rel="stylesheet" href="assets/css/payments.css">
+    <script src="assets/js/billingscript.js"></script>
+    <script src="https://kit.fontawesome.com/50988ee01a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="assets/css/images/logo_1.png" alt="Peace Hill Utilities Logo" class="logo">
+    </header>
+
+
+    <div class="container1">
+        <!--Navigation-->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="expenses">Expenses</button>
+            <button class="tab-btn" data-tab="bills">Bills</button>
+            <button class="tab-btn" data-tab="bill-payments">Bill Payments</button>
+            <button class="tab-btn" data-tab="vendors">Vendors</button>
+            <button class="tab-btn" data-tab="contractors">Contractors</button>
+            <button class="tab-btn" data-tab="mileage">Mileage</button>
+            <button class="tab-btn" data-tab="tax">Tax</button>
+        </div>
+
+        <!-- Expenses -->
+        <!-- Add these just below your existing tabs -->
+        <div class="tab-content" id="expenses">
+            <div class="transaction-buttons">
+                <div class="dropdown">
+                    <button class="tab-btn">New Transaction ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#">Bill</a>
+                        <a href="#">Expense</a>
+                        <a href="#">Check</a>
+                        <a href="#">Purchase Order</a>
+                        <a href="#">Vendor Credit</a>
+                        <a href="#">Credit Card Credit</a>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="tab-btn">Payments ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#">Print Check</a>
+                        <a href="#">Pay Bills</a>
+                        <a href="#">Order Checks</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Filters Section -->
+            <div class="filters">
+                <label for="expenseType">Expense Type:</label>
+                <select id="expenseType">
+                    <option value="all">All</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="supplies">Supplies</option>
+                    <option value="travel">Travel</option>
+                </select>
+
+                <label for="paymentStatus">Payment Status:</label>
+                <select id="paymentStatus">
+                    <option value="all">All</option>
+                    <option value="open">Open</option>
+                    <option value="overdue">Overdue</option>
+                    <option value="paid">Paid</option>
+                </select>
+
+                <label for="filterDate">Date:</label>
+                <input type="date" id="filterDate">
+            </div>
+
+
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
