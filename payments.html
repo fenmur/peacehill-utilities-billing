@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peace Hills Utilities Inc.Billing System: Billing</title>
     <link rel="stylesheet" href="assets/css/payments.css">
-    <script src="assets/js/billingscript.js"></script>
+    <script src="assets/js/payments.js"></script>
     <script src="https://kit.fontawesome.com/50988ee01a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -30,27 +30,33 @@
 
         <!-- Expenses -->
         <!-- Add these just below your existing tabs -->
-        <div class="tab-content" id="expenses">
-            <div class="transaction-buttons">
-                <div class="dropdown">
-                    <button class="tab-btn">New Transaction ▼</button>
-                    <div class="dropdown-content">
-                        <a href="#">Bill</a>
-                        <a href="#">Expense</a>
-                        <a href="#">Check</a>
-                        <a href="#">Purchase Order</a>
-                        <a href="#">Vendor Credit</a>
-                        <a href="#">Credit Card Credit</a>
+        <div class="tab-content active" id="expenses">
+            <div class="tab-header">
+                <h2>Expenses</h2>
+                <div class="transaction-buttons">
+                    <div class="dropdown">
+                        <button id="new-transaction-btn" class="button">
+                            New Transaction <i class="fa fa-angle-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Bill</a>
+                            <a href="#">Expense</a>
+                            <a href="#">Check</a>
+                            <a href="#">Purchase Order</a>
+                            <a href="#">Vendor Credit</a>
+                            <a href="#">Credit Card Credit</a>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class="dropdown">
-                    <button class="tab-btn">Payments ▼</button>
-                    <div class="dropdown-content">
-                        <a href="#">Print Check</a>
-                        <a href="#">Pay Bills</a>
-                        <a href="#">Order Checks</a>
+                    <div class="dropdown">
+                        <button id="payments-btn" class="button">
+                            Payments <i class="fa fa-angle-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Print Check</a>
+                            <a href="#">Pay Bills</a>
+                            <a href="#">Order Checks</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,6 +84,47 @@
 
 
         </div>
+
+        <div class="tab-content" id="bills">
+            <div class="page-header">
+                <h2>Bills</h2>
+                <div class="action-buttons">
+                  <button class="button">Pay bills</button>
+                  <div class="dropdown">
+                    <button class="button" type="button" id="addBillDropdown">
+                      Add Bill <i class="fa fa-angle-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Create bill</a>
+                        <a href="#">Create recurring bill</a>
+                        <a href="#">Upload multiple bills</a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <div class="status-tabs">
+                <button class="status-tab-btn active">For review</button>
+                <button class="status-tab-btn">Unpaid</button>
+                <button class="status-tab-btn">Paid</button>
+              </div>
+              
+              <div class="filters-row">
+                <div class="filters">
+                  <label for="vendorFilter">Vendor:</label>
+                  <select id="vendorFilter">
+                    <option>All Vendors</option>
+                    <option>Vendor1</option>
+                    <option>Vendor2</option>
+                  </select>
+                  
+                  <label for="billDate">Date:</label>
+                  <input type="date" id="billDate">
+                </div>
+              </div>              
+        </div>
+
 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.dropotron.min.js"></script>
