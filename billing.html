@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,266 +9,281 @@
     <script src="assets/js/billingscript.js"></script>
     <script src="https://kit.fontawesome.com/50988ee01a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
- <header>
- <img src="assets/css/images/logo_1.png" alt="Peace Hill Utilities Logo" class="logo">
- </header>
+    <header>
+        <img src="assets/css/images/logo_1.png" alt="Peace Hill Utilities Logo" class="logo">
+    </header>
 
 
- <div class="container1">
-    <!--Navigation-->
+    <div class="container1">
+        <!--Navigation-->
 
-    <div class="tabs">
-        <button class="tab-btn active" data-tab="overview">Overview</button>
-        <button class="tab-btn" data-tab="invoice-transactions">Invoice Transactions</button>
-        <button class="tab-btn" data-tab="invoices">Invoices</button>
-        <button class="tab-btn" data-tab="recurring-payments">Recurring Payments</button>
-    </div>
-   
-    <!--Overview-->
-
-    <div class="tab-content active" id="overview">
-        <h2>Overview</h2>
-     <div class="quick-actions">
-        <button><i class="fa-solid fa-user"></i>Customers</button>
-        <button><i class="fa-solid fa-calculator"></i>Estimate</button>
-        <button><i class="fa-solid fa-gauge"></i>Meter Reads</button>
-        <button><i class="fa-solid fa-file-invoice"></i>Invoice</button>
-        <button><i class="fa-solid fa-file-lines"></i>Recurring Invoice</button>
-        <button><i class="fa-solid fa-money-check-dollar"></i>Receive Payment</button>
-        <button><i class="fa-solid fa-money-check"></i>Take Payment</button>
-        <button><i class="fa-solid fa-receipt"></i>Sales Receipt</button>
-        <button><i class="fa-solid fa-building-columns"></i>Bank Deposit</button>
-        <button><i class="fa-solid fa-file-circle-plus"></i>Create Statement</button>
-    </div>
-
-    <div class ="tasks">
-        <h3>Tasks and Reminders</h3>
-        <button>Go</button>
-    </div>
-
-    <div class="payments">
-       <h3>Match or categorize Payment transactions</h3>
-       <button>Go</button>
-    </div>
-    </div>
-
-   
-
-    <!--Invoices Transactions-->
-    <div class="tab-content" id="invoice-transactions">
-        <h2>Invoice Transactions</h2>
-
-        <div class="invoice-tabs">
-            <button class="invoice-tab active" data-invoice="unbilled" data-tab="unbilled">Unbilled Income</button>
-            <button class="invoice-tab" data-invoice="overdue" data-tab="overdue">Overdue Invoices</button>
-            <button class="invoice-tab" data-invoice="open" data-tab="open">Open Invoices and Credits</button>
-            <button class="invoice-tab" data-invoice="recently-paid" data-tab="recently-paid">Recently Paid</button>
-
-        </div>
-        
-        <div id="unbilled" class="invoice-content">
-            <p>0</p>
-            <h3>Unbilled Income</h3>
-           
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="invoice-transactions">Invoice Transactions</button>
+            <button class="tab-btn" data-tab="invoices">Invoices</button>
+            <button class="tab-btn" data-tab="recurring-payments">Recurring Payments</button>
         </div>
 
-        <div id="overdue" class="invoice-content">
-            <p>0</p>
-            <h3>Overdue Invoices</h3>
-            
-        </div>
+        <!--Overview-->
 
-        <div id="open" class="invoice-content">
-            <p>0</p>
-            <h3>Open Invoices and Credits</h3>
-            
-        </div>
+        <div class="tab-content active" id="overview">
+            <h2>Overview</h2>
+            <div class="quick-actions">
+                <button><i class="fa-solid fa-user"></i>Customers</button>
+                <!-- <button><i class="fa-solid fa-calculator"></i>Estimate</button> -->
+                <button><i class="fa-solid fa-gauge"></i>Meter Reads</button>
+                <button><i class="fa-solid fa-file-invoice"></i>Invoice</button>
+                <button><i class="fa-solid fa-file-lines"></i>Recurring Invoice</button>
+                <button><i class="fa-solid fa-money-check-dollar"></i>Receive Payment</button>
+                <button><i class="fa-solid fa-money-check"></i>Take Payment</button>
+                <button><i class="fa-solid fa-receipt"></i>Sales Receipt</button>
+                <button><i class="fa-solid fa-building-columns"></i>Bank Deposit</button>
+                <!-- <button><i class="fa-solid fa-file-circle-plus"></i>Create Statement</button> -->
+            </div>
 
-        <div id="recently-paid" class="invoice-content">
-            <p>0</p>
-            <h3>Recently Paid</h3>
-            
-        </div>
+            <div class="tasks">
+                <h3>Tasks and Reminders</h3>
+                <button>Go</button>
+            </div>
 
-         
-
-        <div class="filters">
-            <select id="batch-actions">
-                <option> Batch Actions</option>
-                <option> Send Reminders</option>
-                <option> Delete</option>
-            </select>
-            
-            <label for="transaction-type">Type</label>
-            <select id="transaction-type">
-                <option> All Transactions</option>
-                <option>Invoice</option>
-                <option>Receipt</option>
-                <option>Unbilled Income</option>
-                <option> Money Received</option>
-                <option> Recently Paid</option>
-
-            </select>
-            <label for="data-range">Date</label>
-            <select id="data-range">
-                <option>Last 12 months</option>
-                <option> Last 6 months</option>
-                <option> Last 3 months</option>
-                <option> Last 30 days</option>
-            </select>
-             <label for="customer-search">Customer</label>
-            <input type="text" id="customer-search" placeholder="Search">
-        </div>
-        
-
-        <div class="new-transaction">
-            <button id= "new-transaction-btn">New Transaction</button>
-            <div class="dropdown-content">
-                <a href="#">Invoices</a>
-                <a href="#">Payments</a>
-                <a href="#">Receipts</a>
-                <a href="#">Payment Links</a>
-                <a href="#">Delayed Charges</a>
-                <a href="#">NSF Fees</a>
+            <div class="payments">
+                <h3>Match or categorize Payment transactions</h3>
+                <button>Go</button>
             </div>
         </div>
-        <table>
-            <thead>
-                <tr>
-                    <th><input type="checkbox">Date</th>
-                    <th>Type</th>
-                    <th>No.</th>
-                    <th>Customer</th>
-                    <th>Memo</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="invoice-data">
-                <tr>
-                    <td>00/00/2x</td>
-                    <td>Invoice</td>
-                    <td>0000</td>
-                    <td>John Doe</td>
-                    <td>---</td>
-                    <td>$0.00</td>
-                    <td>Due in 0 days</td>
-                    <td><a href="#">View/Edit</a> <a href = "#">Receive Payment</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
-    <!--Invoices-->
 
-    <div class="tab-content" id="invoices">
-        <h2>Invoices</h2>
 
-        <section class="invoices2-summary">
+        <!--Invoices Transactions-->
+        <div class="tab-content" id="invoice-transactions">
+            <h2>Invoice Transactions</h2>
+
+            <div class="invoice-tabs">
+                <button class="invoice-tab active" data-invoice="unbilled" data-tab="unbilled">Unbilled Income</button>
+                <button class="invoice-tab" data-invoice="overdue" data-tab="overdue">Overdue Invoices</button>
+                <button class="invoice-tab" data-invoice="open" data-tab="open">Open Invoices and Credits</button>
+                <button class="invoice-tab" data-invoice="recently-paid" data-tab="recently-paid">Recently Paid</button>
+
+            </div>
+
+            <div id="unbilled" class="invoice-content">
+                <p>0</p>
+                <h3>Unbilled Income</h3>
+
+            </div>
+
+            <div id="overdue" class="invoice-content">
+                <p>0</p>
+                <h3>Overdue Invoices</h3>
+
+            </div>
+
+            <div id="open" class="invoice-content">
+                <p>0</p>
+                <h3>Open Invoices and Credits</h3>
+
+            </div>
+
+            <div id="recently-paid" class="invoice-content">
+                <p>0</p>
+                <h3>Recently Paid</h3>
+
+            </div>
+
+
+
+            <div class="filters">
+                <div class="filter-group">
+                  <label for="batch-actions">Batch Actions</label>
+                  <select id="batch-actions">
+                    <option>Batch Actions</option>
+                    <option>Send Reminders</option>
+                    <option>Delete</option>
+                  </select>
+                </div>
+              
+                <div class="filter-group">
+                  <label for="transaction-type">Type</label>
+                  <select id="transaction-type">
+                    <option>All Transactions</option>
+                    <option>Invoice</option>
+                    <option>Receipt</option>
+                    <option>Unbilled Income</option>
+                    <option>Money Received</option>
+                    <option>Recently Paid</option>
+                  </select>
+                </div>
+              
+                <div class="filter-group">
+                  <label for="data-range">Date</label>
+                  <select id="data-range">
+                    <option>Last 12 months</option>
+                    <option>Last 6 months</option>
+                    <option>Last 3 months</option>
+                    <option>Last 30 days</option>
+                  </select>
+                </div>
+              
+                <div class="filter-group">
+                  <label for="customer-search">Customer</label>
+                  <input type="text" id="customer-search" placeholder="Search">
+                </div>
+              </div>
+
+
+            <div class="new-transaction">
+                <button id="new-transaction-btn">New Transaction</button>
+                <div class="dropdown-content">
+                    <a href="#">Invoices</a>
+                    <a href="#">Payments</a>
+                    <a href="#">Receipts</a>
+                    <a href="#">Payment Links</a>
+                    <a href="#">Delayed Charges</a>
+                    <a href="#">NSF Fees</a>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox">Date</th>
+                        <th>Type</th>
+                        <th>No.</th>
+                        <th>Customer</th>
+                        <th>Memo</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="invoice-data">
+                    <tr>
+                        <td>00/00/2x</td>
+                        <td>Invoice</td>
+                        <td>0000</td>
+                        <td>John Doe</td>
+                        <td>---</td>
+                        <td>$0.00</td>
+                        <td>Due in 0 days</td>
+                        <td><a href="#">View/Edit</a> <a href="#">Receive Payment</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Invoices-->
+
+        <div class="tab-content" id="invoices">
+            <h2>Invoices</h2>
+
+            <section class="invoices2-summary">
                 <div class="summary-item">
                     <p>$1,000.00 <span class="label">Unpaid</span></p>
                     <small>Last 365 days</small>
                     <div class="invoices2-summary progress-bar unpaid"></div>
                 </div>
-                    <div class="summary-item">
-                        <p>$1,525.50 <span class="label">Overdue</span></p>
-                        <div class="invoices2-summary progress-bar overdue"></div>
-                    </div>
-                    <div class="summary-item">
-                        <p>$1,000.00 <span class="label">Not Due Yet</span></p>
-                        <div class="invoices2-summary progress-bar not-due"></div>
-                    </div>
-                    <div class="summary-item">
-                        <p>$1,000.00 <span class="label">Paid</span></p>
-                        <small>Last 30 days</small>
-                        <div class="invoices2-summary progress-bar paid"></div>
-                    </div>
-                    <div class="summary-item">
-                        <p>$1,000.00 <span class="label">Not Deposited</span></p>
-                        <div class="invoices2-summary progress-bar not-deposited"></div>
-                    </div>
+                <div class="summary-item">
+                    <p>$1,525.50 <span class="label">Overdue</span></p>
+                    <div class="invoices2-summary progress-bar overdue"></div>
+                </div>
+                <div class="summary-item">
+                    <p>$1,000.00 <span class="label">Not Due Yet</span></p>
+                    <div class="invoices2-summary progress-bar not-due"></div>
+                </div>
+                <div class="summary-item">
+                    <p>$1,000.00 <span class="label">Paid</span></p>
+                    <small>Last 30 days</small>
+                    <div class="invoices2-summary progress-bar paid"></div>
+                </div>
+                <div class="summary-item">
+                    <p>$1,000.00 <span class="label">Not Deposited</span></p>
+                    <div class="invoices2-summary progress-bar not-deposited"></div>
+                </div>
 
-                       
-                    <div class="summary-item">
-                        <p>$1,000.00 <span class="label">Deposited</span></p>
-                        <div class="invoices2-summary progress-bar deposited"></div>
-                    </div>
-        </section>
 
-        <section class="invoices2-filters">
-            <div class="filter-group">
-                <button id="batch-actions">Batch Actions</button>
-            </div>
-            <div class="filter-group">
-                <label>Status</label>
-                <select>
+                <div class="summary-item">
+                    <p>$1,000.00 <span class="label">Deposited</span></p>
+                    <div class="invoices2-summary progress-bar deposited"></div>
+                </div>
+            </section>
+
+            <section class="invoices2-filters">
+                <div class="filter-group">
+                  <button id="batch-actions" class="button">Batch Actions</button>
+                </div>
+              
+                <div class="filter-group">
+                  <label for="status-filter">Status</label>
+                  <select id="status-filter">
                     <option>All</option>
                     <option>Paid</option>
                     <option>Unpaid</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label>Date</label>
-                <select>
+                  </select>
+                </div>
+              
+                <div class="filter-group">
+                  <label for="date-filter">Date</label>
+                  <select id="date-filter">
                     <option>Last 12 months</option>
-                    <option> Last 30 days</option>
+                    <option>Last 30 days</option>
                     <option>Last 7 days</option>
-                </select>
-            </div>
+                  </select>
+                </div>
+              
+                <div class="filter-group">
+                  <!-- <label>&nbsp;</label> empty label for spacing -->
+                  <button class="create-invoice button">Create Invoice</button>
+                </div>
+              </section>
+              
 
-            <div class="create-invoice">
-                <button>Create Invoice</button>
+            <div class="invoices2-table">
+                <section class="invoices2-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>DATE</th>
+                                <th>NO.</th>
+                                <th>CUSTOMER</th>
+                                <th>AMOUNT</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoice-data2">
+                            <tr>
+                                <td>00/00/2x</td>
+                                <td>1000</td>
+                                <td>James Smith: Smith's ClearWater Works</td>
+                                <td>$1,000.00</td>
+                                <td><span class="status-overdue">Overdue 7 days</span></td>
+                                <td><a href="#">View</a>
+                                    <a href="#">Receive Payment</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </div>
-        </section>
-
-        <div class="invoices2-table">
-        <section class="invoices2-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>DATE</th>
-                        <th>NO.</th>
-                        <th>CUSTOMER</th>
-                        <th>AMOUNT</th>
-                        <th>STATUS</th>
-                        <th>ACTION</th>
-                    </tr>
-                </thead>
-                <tbody id="invoice-data2">
-                    <tr>
-                        <td>00/00/2x</td>
-                        <td>1000</td>
-                        <td>James Smith: Smith's ClearWater Works</td>
-                        <td>$1,000.00</td>
-                        <td><span class="status-overdue">Overdue 7 days</span></td>
-                        <td><a href="#">View</a>
-                            <a href="#">Receive Payment</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
         </div>
+
+
+        <!--Recurring Payments-->
+
+        <div class="tab-content" id="recurring-payments">
+            <h2>Recurring Payments</h2>
+        </div>
+
     </div>
 
-    
-    <!--Recurring Payments-->
-
-    <div class="tab-content" id="recurring-payments">
-        <h2>Recurring Payments</h2>
-    </div>
-
- </div>
-
- <script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
-</html>
 
+</html>
