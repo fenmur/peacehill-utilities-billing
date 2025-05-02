@@ -89,44 +89,86 @@
             <div class="page-header">
                 <h2>Bills</h2>
                 <div class="action-buttons">
-                  <button class="button">Pay bills</button>
-                  <div class="dropdown">
-                    <button class="button" type="button" id="addBillDropdown">
-                      Add Bill <i class="fa fa-angle-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Create bill</a>
-                        <a href="#">Create recurring bill</a>
-                        <a href="#">Upload multiple bills</a>
+                    <button class="button">Pay bills</button>
+                    <div class="dropdown">
+                        <button class="button" type="button" id="addBillDropdown">
+                            Add Bill <i class="fa fa-angle-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Create bill</a>
+                            <a href="#">Create recurring bill</a>
+                            <a href="#">Upload multiple bills</a>
+                        </div>
                     </div>
-                  </div>
-                  
+
                 </div>
-              </div>
-              
-              <div class="status-tabs">
+            </div>
+
+            <div class="status-tabs">
                 <button class="status-tab-btn active">For review</button>
                 <button class="status-tab-btn">Unpaid</button>
                 <button class="status-tab-btn">Paid</button>
-              </div>
-              
-              <div class="filters-row">
+            </div>
+
+            <div class="filters-row">
                 <div class="filters">
-                  <label for="vendorFilter">Vendor:</label>
-                  <select id="vendorFilter">
-                    <option>All Vendors</option>
-                    <option>Vendor1</option>
-                    <option>Vendor2</option>
-                  </select>
-                  
-                  <label for="billDate">Date:</label>
-                  <input type="date" id="billDate">
+                    <label for="vendorFilter">Vendor:</label>
+                    <select id="vendorFilter">
+                        <option>All Vendors</option>
+                        <option>Vendor1</option>
+                        <option>Vendor2</option>
+                    </select>
+
+                    <label for="billDate">Date:</label>
+                    <input type="date" id="billDate">
                 </div>
-              </div>              
+            </div>
         </div>
 
         <div class="tab-content" id="vendors">
+            <div class="vendor-tabs">
+                <button class="vendor-tab-btn vendor-active" data-tab="purchase-order">Purchase Order</button>
+                <button class="vendor-tab-btn" data-tab="overdue">Overdue</button>
+                <button class="vendor-tab-btn" data-tab="open-bills">Open Bills</button>
+                <button class="vendor-tab-btn" data-tab="paid">Paid</button>
 
+                <div class="vendor-dropdown-tab">
+                    <button class="button">Manage Vendor ▾</button>
+                    <div class="vendor-dropdown-content">
+                        <a href="#">Create New Vendor</a>
+                        <a href="#">Multiple Vendors</a>
+                        <a href="#">Edit Vendor Details</a>
+                        <a href="#">Import Vendors</a>
+                    </div>
+                </div>
+
+                <div class="vendor-dropdown-tab">
+                    <button class="button">Pay Bills ▾</button>
+                    <div class="vendor-dropdown-content">
+                        <a href="#">Pay Bills</a>
+                        <a href="#">Order Checks</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab content areas -->
+            <div id="purchase-order" class="vendor-tab-content vendor-active">Purchase Order transactions listed here...
+            </div>
+            <div id="overdue" class="vendor-tab-content">Overdue transactions listed here...</div>
+            <div id="open-bills" class="vendor-tab-content">Open Bills listed here...</div>
+            <div id="paid" class="vendor-tab-content">Paid transactions listed here...</div>
+
+            <!-- Filters -->
+            <div class="vendor-filters">
+                <div class="filter-group">
+                    <label for="vendor-name">Vendor Name</label>
+                    <input type="text" id="vendor-name" placeholder="Enter vendor name">
+                </div>
+                <div class="filter-group">
+                    <label for="vendor-date">Date</label>
+                    <input type="date" id="vendor-date">
+                </div>
+            </div>
         </div>
 
 

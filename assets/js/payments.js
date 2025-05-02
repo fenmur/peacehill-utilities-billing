@@ -51,4 +51,20 @@ document.addEventListener("DOMContentLoaded", function () {
     e.stopPropagation();
     dropdownContent.classList.toggle("show");
   });
+
+  document.querySelectorAll(".vendor-tab-btn[data-tab]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const tab = button.getAttribute("data-tab");
+
+      document
+        .querySelectorAll(".vendor-tab-btn[data-tab]")
+        .forEach((btn) => btn.classList.remove("vendor-active"));
+      document
+        .querySelectorAll(".vendor-tab-content")
+        .forEach((content) => content.classList.remove("vendor-active"));
+
+      button.classList.add("vendor-active");
+      document.getElementById(tab).classList.add("vendor-active");
+    });
+  });
 });
