@@ -12,7 +12,8 @@
 
 <body>
     <header>
-        <img src="assets/css/images/logo_1.png" alt="Peace Hill Utilities Logo" class="logo">
+
+        <a href="index.html"> <img src="assets/css/images/logo_1.png" alt="Peace Hill Utilities Logo" class="logo"></a>
     </header>
 
 
@@ -35,54 +36,180 @@
                 <h2>Expenses</h2>
                 <div class="transaction-buttons">
                     <div class="dropdown">
+                        <button id="payments-btn" class="print-check-button">
+                            Print Check <i class="fa fa-angle-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <!-- <a href="#">Print Check</a> -->
+                            <a href="#">Pay Bills</a>
+                            <a href="#">Order Checks</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
                         <button id="new-transaction-btn" class="button">
                             New Transaction <i class="fa fa-angle-down"></i>
                         </button>
                         <div class="dropdown-content">
+                            <a href="#">Time Activity</a>
                             <a href="#">Bill</a>
                             <a href="#">Expense</a>
                             <a href="#">Check</a>
                             <a href="#">Purchase Order</a>
                             <a href="#">Vendor Credit</a>
                             <a href="#">Credit Card Credit</a>
-                        </div>
-                    </div>
-
-                    <div class="dropdown">
-                        <button id="payments-btn" class="button">
-                            Payments <i class="fa fa-angle-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#">Print Check</a>
-                            <a href="#">Pay Bills</a>
-                            <a href="#">Order Checks</a>
+                            <a href="#">Pay down credit card</a>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Filters Section -->
             <div class="filters">
-                <label for="expenseType">Expense Type:</label>
                 <select id="expenseType">
-                    <option value="all">All</option>
-                    <option value="utilities">Utilities</option>
-                    <option value="supplies">Supplies</option>
-                    <option value="travel">Travel</option>
+                    <option selected value="all">All Transactions</option>
+                    <option value="expense">Expense</option>
+                    <option value="bill">Bill</option>
+                    <option value="bp">Bill Payment</option>
+                    <option value="check">Check</option>
+                    <option value="po">Purchase Order</option>
+                    <option value="recentlypaid">Recently Paid</option>
+                    <option value="vc">Vendor Credit</option>
+                    <option value="ccp">Credit Card Payment</option>
                 </select>
+                <div class="filter-container">
+                    <div id="filterToggle" class="filter-trigger">
+                        <img class="filter-icon" src="./images/filter.png" alt="Filter Icon">
+                        <span class="filter-text">Filter</span>
+                    </div>
+                    <div id="filterPanel" class="filter-panel hidden">
+                        <div>
+                            <label for="paymentStatus">Payment Status:</label>
+                            <select id="paymentStatus">
+                                <option value="all">All</option>
+                                <option value="open">Open</option>
+                                <option value="overdue">Overdue</option>
+                                <option value="paid">Paid</option>
+                            </select>
+                        </div>
+                        <div class="date-range">
+                            <label for="fromDate">From:</label>
+                            <input type="date" id="fromDate">
+                            <label for="toDate">To:</label>
+                            <input type="date" id="toDate">
+                        </div>
+                        <div class="payee-dropdown-filter">
+                            <label for="payee">Payee:</label>
+                            <select id="payee">
+                                <option value="all">All</option>
+                                <option value="p1">Payee 1</option>
+                                <option value="p2">Payee 2</option>
+                                <option value="p3">Payee 3</option>
 
-                <label for="paymentStatus">Payment Status:</label>
-                <select id="paymentStatus">
-                    <option value="all">All</option>
-                    <option value="open">Open</option>
-                    <option value="overdue">Overdue</option>
-                    <option value="paid">Paid</option>
-                </select>
-
-                <label for="filterDate">Date:</label>
-                <input type="date" id="filterDate">
+                            </select>
+                        </div>
+                        <div>
+                            <label for="category">Category:</label>
+                            <select id="category">
+                                <option value="all">All</option>
+                                <option value="c1">Category 1</option>
+                                <option value="c2">Category 2</option>
+                                <option value="c3">Category 3</option>
+                            </select>
+                        </div>
+                        <div class="filter-buttons">
+                            <button id="resetFilter">Reset</button>
+                            <button id="applyFilter" class="button">Apply</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="checkbox-cell"><input type="checkbox" id="selectAll" /></th>
+                        <th>DATE</th>
+                        <th>TYPE</th>
+                        <th>NO.</th>
+                        <th>PAYEE</th>
+                        <th>CATEGORY</th>
+                        <th>TOTAL</th>
+                        <th>APPROVAL STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="checkbox-cell"><input type="checkbox" class="rowCheckbox" /></td>
+                        <td>04/28/2025</td>
+                        <td>Credit Card Expense</td>
+                        <td></td>
+                        <td>Squeaky Kleen Car Wash</td>
+                        <td>
+                            <select>
+                                <option selected>Automobile</option>
+                                <option>Travel</option>
+                                <option>Office Supplies</option>
+                            </select>
+                        </td>
+                        <td>$34.00</td>
+                        <td></td>
+                        <td><a href="#" class="action-link">View/Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-cell"><input type="checkbox" class="rowCheckbox" /></td>
+                        <td>04/26/2025</td>
+                        <td>Check</td>
+                        <td>1730</td>
+                        <td>ATCO</td>
+                        <td>
+                            <select>
+                                <option selected>Utilities</option>
+                                <option>Travel</option>
+                                <option>Office Supplies</option>
+                            </select>
+                        </td>
+                        <td>$123.43</td>
+                        <td></td>
+                        <td><a href="#" class="action-link">View/Edit</a></td>
+                    </tr>
 
+                    <tr>
+                        <td class="checkbox-cell"><input type="checkbox" class="rowCheckbox" /></td>
+                        <td>04/25/2025</td>
+                        <td>Expense</td>
+                        <td></td>
+                        <td>Peace Hills Utilities Inc.</td>
+                        <td>
+                            <select>
+                                <option selected>Utilities</option>
+                                <option>Travel</option>
+                                <option>Office Supplies</option>
+                            </select>
+                        </td>
+                        <td>$1,506.06</td>
+                        <td></td>
+                        <td><a href="#" class="action-link">View/Edit</a></td>
+                    </tr>
 
+                    <tr>
+                        <td class="checkbox-cell"><input type="checkbox" class="rowCheckbox" /></td>
+                        <td>04/24/2025</td>
+                        <td>Check</td>
+                        <td>1729</td>
+                        <td>Canadian Western Bank</td>
+                        <td>
+                            <select>
+                                <option selected>Bank Charges</option>
+                                <option>Travel</option>
+                                <option>Office Supplies</option>
+                            </select>
+                        </td>
+                        <td>$11.00</td>
+                        <td></td>
+                        <td><a class="action-link">View/Edit</a></td>
+                    </tr>
+                    <!-- More rows -->
+                </tbody>
+            </table>
         </div>
 
         <div class="tab-content" id="bills">
@@ -133,7 +260,7 @@
                 <button class="vendor-tab-btn" data-tab="paid">Paid</button>
 
                 <div class="vendor-dropdown-tab">
-                    <button class="button">Manage Vendor ▾</button>
+                    <button class="button">Manage Vendor</button>
                     <div class="vendor-dropdown-content">
                         <a href="#">Create New Vendor</a>
                         <a href="#">Multiple Vendors</a>
@@ -143,7 +270,7 @@
                 </div>
 
                 <div class="vendor-dropdown-tab">
-                    <button class="button">Pay Bills ▾</button>
+                    <button class="button">Pay Bills</button>
                     <div class="vendor-dropdown-content">
                         <a href="#">Pay Bills</a>
                         <a href="#">Order Checks</a>
@@ -152,7 +279,8 @@
             </div>
 
             <!-- Tab content areas -->
-            <div id="purchase-order" class="vendor-tab-content vendor-active">Purchase Order transactions listed here...
+            <div id="purchase-order" class="vendor-tab-content vendor-active">Purchase Order transactions listed
+                here...
             </div>
             <div id="overdue" class="vendor-tab-content">Overdue transactions listed here...</div>
             <div id="open-bills" class="vendor-tab-content">Open Bills listed here...</div>

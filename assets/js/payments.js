@@ -67,4 +67,31 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById(tab).classList.add("vendor-active");
     });
   });
+
+  const filterToggle = document.getElementById("filterToggle");
+  const filterPanel = document.getElementById("filterPanel");
+
+  filterToggle.addEventListener("click", function (event) {
+    event.stopPropagation();
+    filterPanel.classList.toggle("hidden");
+  });
+
+  const appltfilterButton = document.getElementById("applyFilter");
+  appltfilterButton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    filterPanel.classList.toggle("hidden");
+  });
+
+  const resetFilterButton = document.getElementById("resetFilter");
+  resetFilterButton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    filterPanel.classList.toggle("hidden");
+  });
+  
+
+  document.addEventListener("click", function (event) {
+    if (!filterPanel.contains(event.target) && !filterToggle.contains(event.target)) {
+      filterPanel.classList.add("hidden");
+    }
+  });
 });
