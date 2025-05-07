@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const filterToggle = document.getElementById("filterToggle");
-  const filterPanel = document.getElementById("filterPanel");
 
   filterToggle.addEventListener("click", function (event) {
     event.stopPropagation();
@@ -87,10 +86,34 @@ document.addEventListener("DOMContentLoaded", function () {
     event.stopPropagation();
     filterPanel.classList.toggle("hidden");
   });
-  
+
+  const filterVendor = document.getElementById("filterToggleBills");
+  const filterPanelBills = document.getElementById("filterPanelBills");
+  filterVendor.addEventListener("click", function (event) {
+    event.stopPropagation();
+    filterPanelBills.classList.toggle("hidden");
+  });
+
+  document.querySelectorAll(".schedule-payment").forEach((button) => {
+    button.addEventListener("click", function () {
+      const dropdownContent = this.nextElementSibling;
+      dropdownContent.classList.toggle("visible");
+    });
+  });
+
+  window.addEventListener("click", function (event) {
+    if (!event.target.matches(".schedule-payment")) {
+      document.querySelectorAll(".dropdown-content-bill").forEach((content) => {
+        content.classList.remove("visible");
+      });
+    }
+  });
 
   document.addEventListener("click", function (event) {
-    if (!filterPanel.contains(event.target) && !filterToggle.contains(event.target)) {
+    if (
+      !filterPanel.contains(event.target) &&
+      !filterToggle.contains(event.target)
+    ) {
       filterPanel.classList.add("hidden");
     }
   });

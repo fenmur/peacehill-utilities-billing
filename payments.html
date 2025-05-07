@@ -22,10 +22,8 @@
         <div class="tabs">
             <button class="tab-btn active" data-tab="expenses">Expenses</button>
             <button class="tab-btn" data-tab="bills">Bills</button>
-            <!-- <button class="tab-btn" data-tab="bill-payments">Bill Payments</button> -->
             <button class="tab-btn" data-tab="vendors">Vendors</button>
             <button class="tab-btn" data-tab="contractors">Contractors</button>
-            <!-- <button class="tab-btn" data-tab="mileage">Mileage</button> -->
             <button class="tab-btn" data-tab="tax">Tax</button>
         </div>
 
@@ -234,20 +232,117 @@
                 <button class="status-tab-btn">Unpaid</button>
                 <button class="status-tab-btn">Paid</button>
             </div>
-
-            <div class="filters-row">
-                <div class="filters">
-                    <label for="vendorFilter">Vendor:</label>
-                    <select id="vendorFilter">
-                        <option>All Vendors</option>
-                        <option>Vendor1</option>
-                        <option>Vendor2</option>
-                    </select>
-
-                    <label for="billDate">Date:</label>
-                    <input type="date" id="billDate">
+            <div class="filters">
+                <div class="filter-container">
+                    <div id="filterToggleBills" class="filter-trigger">
+                        <span class="filter-text">Filters</span>
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div id="filterPanelBills" class="filter-panel hidden">
+                        <div>
+                            <label for="vendorFilter">Vendor:</label>
+                            <select id="vendorFilter">
+                                <option>All Vendors</option>
+                                <option>Vendor1</option>
+                                <option>Vendor2</option>
+                            </select>
+                        </div>
+                        <div class="date-range">
+                            <label for="fromDate">From:</label>
+                            <input type="date" id="fromDate">
+                            <label for="toDate">To:</label>
+                            <input type="date" id="toDate">
+                        </div>
+                        <div class="filter-buttons">
+                            <button id="resetFilter">Reset</button>
+                            <button id="applyFilter" class="button">Apply</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <table class="bills-table">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <th>VENDOR</th>
+                        <th>DUE DATE</th>
+                        <th>BILL AMOUNT</th>
+                        <th>OPEN BALANCE</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>PG&E</td>
+                        <td>03/19/2025</td>
+                        <td>$86.44</td>
+                        <td>$86.44</td>
+                        <td class="overdue">Overdue<br>42 days ago</td>
+                        <td class="dropdown-bill">
+                            <button class="schedule-payment">Schedule payment <i class="fa fa-angle-down"></i></button>
+                            <div class="dropdown-content-bill hidden">
+                                <a href="#">Mark as Paid</a>
+                                <a href="#">View/Edit Bill</a>
+                                <a href="#">Duplicate</a>
+                                <a href="#">Delete Bill</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Norton Lumber and Building Materials</td>
+                        <td>04/03/2025</td>
+                        <td>$205.00</td>
+                        <td>$205.00</td>
+                        <td class="overdue">Overdue<br>27 days ago</td>
+                        <td class="dropdown-bill">
+                            <button class="schedule-payment">Schedule payment <i class="fa fa-angle-down"></i></button>
+                            <div class="dropdown-content-bill hidden">
+                                <a href="#">Mark as Paid</a>
+                                <a href="#">View/Edit Bill</a>
+                                <a href="#">Duplicate</a>
+                                <a href="#">Delete Bill</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Robertson & Associates</td>
+                        <td>04/03/2025</td>
+                        <td>$315.00</td>
+                        <td>$315.00</td>
+                        <td class="overdue">Overdue<br>27 days ago</td>
+                        <td class="dropdown-bill">
+                            <button class="schedule-payment">Schedule payment <i class="fa fa-angle-down"></i></button>
+                            <div class="dropdown-content-bill hidden">
+                                <a href="#">Mark as Paid</a>
+                                <a href="#">View/Edit Bill</a>
+                                <a href="#">Duplicate</a>
+                                <a href="#">Delete Bill</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Brosnahan Insurance Agency</td>
+                        <td>04/06/2025</td>
+                        <td>$241.23</td>
+                        <td>$241.23</td>
+                        <td class="overdue">Overdue<br>24 days ago</td>
+                        <td class="dropdown-bill">
+                            <button class="schedule-payment">Schedule payment <i class="fa fa-angle-down"></i></button>
+                            <div class="dropdown-content-bill hidden">
+                                <a href="#">Mark as Paid</a>
+                                <a href="#">View/Edit Bill</a>
+                                <a href="#">Duplicate</a>
+                                <a href="#">Delete Bill</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="tab-content" id="vendors">

@@ -506,3 +506,83 @@ td select {
 .payee-dropdown-filter {
   margin: 10px 0px;
 }
+
+#filterToggleBills {
+  border: 2px solid green;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 7px 20px;
+  border-radius: 4px;
+  color: green;
+}
+
+.fa-angle-down {
+  margin-left: 5px;
+}
+
+.bills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.bills-table th,
+.bills-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.bills-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.bills-table .overdue {
+  color: #ff5722;
+}
+
+.bills-table .schedule-payment {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bills-table .schedule-payment:hover {
+  background-color: #45a049;
+}
+
+.dropdown-bill {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-bill {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content-bill a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-bill a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content-bill.visible {
+  display: block;
+}
